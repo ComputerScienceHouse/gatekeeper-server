@@ -5,6 +5,8 @@ from gatekeeper.users.schema import Query as UserQuery
 from gatekeeper.users.schema import Mutation as UserMutation
 from gatekeeper.groups.schema import Query as GroupQuery
 from gatekeeper.groups.schema import Mutation as GroupMutation
+from gatekeeper.realms.schema import Query as RealmQuery
+from gatekeeper.realms.schema import Mutation as RealmMutation
 
 
 # This class combines all of the app-level Query objects
@@ -12,6 +14,7 @@ class Query(
     AccessPointQuery,
     UserQuery,
     GroupQuery,
+    RealmQuery,
     graphene.ObjectType
 ):
     pass
@@ -22,6 +25,7 @@ class Mutation(
     AccessPointMutation,
     UserMutation,
     GroupMutation,
+    RealmMutation,
     graphene.ObjectType
 ):
     pass

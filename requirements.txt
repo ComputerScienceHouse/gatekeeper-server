@@ -5,6 +5,7 @@ django-filter==1.1.0
 django-guardian==1.4.9
 django-rest-framework==0.1.0
 djangorestframework==3.8.2
+ecdsa==0.13
 graphene==2.1.2
 graphene-django==2.1rc1
 graphene-django-extras==0.3.7

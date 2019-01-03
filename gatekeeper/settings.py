@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'guardian',
     'graphene_django',
     'gatekeeper.access_points',
+    'gatekeeper.realms'
 ]
 
 MIDDLEWARE = [
