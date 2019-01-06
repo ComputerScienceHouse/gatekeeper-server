@@ -1,4 +1,3 @@
-
 # Gatekeeper - Open source access control
 # Copyright (C) 2018-2019 Steven Mirabito
 #
@@ -28,6 +27,8 @@ from gatekeeper.realms.schema import Query as RealmQuery
 from gatekeeper.realms.schema import Mutation as RealmMutation
 from gatekeeper.configuration.schema import Query as ConfigurationQuery
 from gatekeeper.configuration.schema import Mutation as ConfigurationMutation
+from gatekeeper.tags.schema import Query as TagQuery
+from gatekeeper.tags.schema import Mutation as TagMutation
 
 
 # This class combines all of the app-level Query objects
@@ -37,6 +38,7 @@ class Query(
     GroupQuery,
     RealmQuery,
     ConfigurationQuery,
+    TagQuery,
     graphene.ObjectType
 ):
     pass
@@ -49,6 +51,7 @@ class Mutation(
     GroupMutation,
     RealmMutation,
     ConfigurationMutation,
+    TagMutation,
     graphene.ObjectType
 ):
     pass
