@@ -56,10 +56,11 @@ INSTALLED_APPS = [
     'corsheaders',
     'guardian',
     'graphene_django',
+    'gatekeeper.users',
     'gatekeeper.access_points',
     'gatekeeper.realms',
     'gatekeeper.configuration',
-    'gatekeeper.tags'
+    'gatekeeper.tags',
 ]
 
 MIDDLEWARE = [
@@ -107,6 +108,9 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# Custom user model
+AUTH_USER_MODEL = 'users.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators

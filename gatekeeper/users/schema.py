@@ -1,4 +1,3 @@
-
 # Gatekeeper - Open source access control
 # Copyright (C) 2018-2019 Steven Mirabito
 #
@@ -28,6 +27,16 @@ class UserType(DjangoSerializerType):
         input_field_name = 'newUser'
         output_field_name = 'user'
         pagination = LimitOffsetGraphqlPagination(default_limit=10, ordering='-username')
+        only_fields = [
+            'id',
+            'username',
+            'email',
+            'first_name',
+            'last_name',
+            'is_staff',
+            'is_active',
+            'is_superuser'
+        ]
         filter_fields = {
             'username': ['exact', 'icontains'],
             'email': ['exact', 'icontains'],

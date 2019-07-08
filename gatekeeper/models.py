@@ -1,4 +1,3 @@
-
 # Gatekeeper - Open source access control
 # Copyright (C) 2018-2019 Steven Mirabito
 #
@@ -23,11 +22,11 @@ from django.db import models
 from graphene.relay import Connection
 
 
-class UUIDModel(models.Model):
+class BaseModel(models.Model):
     """
-    An abstract base class model that provides a UUID as the primary key.
+    An abstract base class model the provides common fields.
     """
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    external_id = models.UUIDField(unique=True, default=uuid.uuid4, editable=False)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 

@@ -23,7 +23,7 @@ from gatekeeper.tags.models import Tag, TagRealmAssociation
 class TagSerializer(ModelSerializer):
     class Meta:
         model = Tag
-        fields = ['user']
+        fields = ['user', 'uid']
 
 
 class TagRealmAssociationSerializer(ModelSerializer):

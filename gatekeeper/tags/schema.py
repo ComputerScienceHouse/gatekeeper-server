@@ -27,9 +27,11 @@ class TagType(DjangoSerializerType):
         input_field_name = 'newTag'
         output_field_name = 'tag'
         pagination = LimitOffsetGraphqlPagination(default_limit=10)
-        only_fields = ['id', 'created', 'modified', 'user', ]
+        only_fields = ['id', 'external_id', 'created', 'modified', 'user', 'uid', ]
         filter_fields = {
             'id': ['exact', ],
+            'external_id': ['exact', ],
+            'uid': ['exact', ],
             'user': ['exact', ]
         }
 
@@ -43,6 +45,7 @@ class TagRealmAssociationType(DjangoSerializerType):
         pagination = LimitOffsetGraphqlPagination()
         filter_fields = {
             'id': ['exact', ],
+            'external_id': ['exact', ],
             'tag': ['exact', ],
             'realm': ['exact', ]
         }

@@ -1,4 +1,3 @@
-
 # Gatekeeper - Open source access control
 # Copyright (C) 2018-2019 Steven Mirabito
 #
@@ -18,7 +17,7 @@
 # along with Gatekeeper.  If not, see <http://www.gnu.org/licenses/>.
 
 from rest_framework.serializers import ModelSerializer
-from django.contrib.auth.models import User
+from gatekeeper.users.models import User
 
 
 class UserSerializer(ModelSerializer):

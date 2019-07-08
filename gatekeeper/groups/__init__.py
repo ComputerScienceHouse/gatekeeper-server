@@ -1,4 +1,3 @@
-
 # Gatekeeper - Open source access control
 # Copyright (C) 2018-2019 Steven Mirabito
 #
@@ -16,4 +15,3 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with Gatekeeper.  If not, see <http://www.gnu.org/licenses/>.
-

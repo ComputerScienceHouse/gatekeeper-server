@@ -18,10 +18,10 @@
 # along with Gatekeeper.  If not, see <http://www.gnu.org/licenses/>.
 
 from django.db import models
-from gatekeeper.models import UUIDModel
+from gatekeeper.models import BaseModel
 
 
-class Realm(UUIDModel):
+class Realm(BaseModel):
     name = models.CharField(max_length=100)
     slot = models.IntegerField()
     read_key = models.CharField(max_length=32)

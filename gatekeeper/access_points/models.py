@@ -18,10 +18,10 @@
 # along with Gatekeeper.  If not, see <http://www.gnu.org/licenses/>.
 
 from django.db import models
-from gatekeeper.models import UUIDModel
+from gatekeeper.models import BaseModel
 
 
-class AccessPoint(UUIDModel):
+class AccessPoint(BaseModel):
     name = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
     online = models.BooleanField(default=False)

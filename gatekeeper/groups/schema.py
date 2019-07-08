@@ -1,4 +1,3 @@
-
 # Gatekeeper - Open source access control
 # Copyright (C) 2018-2019 Steven Mirabito
 #

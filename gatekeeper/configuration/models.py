@@ -17,12 +17,12 @@
 # along with Gatekeeper.  If not, see <http://www.gnu.org/licenses/>.
 
 from django.db import models
-from gatekeeper.models import UUIDModel
+from gatekeeper.models import BaseModel
 
 
-class Configuration(UUIDModel):
+class Configuration(BaseModel):
     modified = models.DateTimeField(auto_now=True)
     system_secret = models.CharField(max_length=32)
 
     def __str__(self):
-        return f"Configuration(system_secret='{self.system_secret}'"
+        return "Configuration"

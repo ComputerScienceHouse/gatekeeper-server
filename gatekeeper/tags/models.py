@@ -17,20 +17,21 @@
 # along with Gatekeeper.  If not, see <http://www.gnu.org/licenses/>.
 
 from django.db import models
-from django.contrib.auth.models import User
-from gatekeeper.models import UUIDModel
+from django.conf import settings
+from gatekeeper.models import BaseModel
 from gatekeeper.realms.models import Realm
 
 
-class Tag(UUIDModel):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+class Tag(BaseModel):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    uid = models.CharField(max_length=14, null=True, blank=True)
     realms = models.ManyToManyField(Realm, through='TagRealmAssociation')
 
     def __str__(self):
         return f"{self.id}, user='{self.user.username}'"
 
 
-class TagRealmAssociation(UUIDModel):
+class TagRealmAssociation(BaseModel):
     tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
     realm = models.ForeignKey(Realm, on_delete=models.CASCADE)
     last_used = models.DateTimeField(null=True, blank=True)
