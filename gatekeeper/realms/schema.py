@@ -20,7 +20,7 @@
 import secrets
 import graphene
 from ecdsa import SigningKey, NIST384p
-from graphene_django.rest_framework.types import ErrorType
+from graphene_django.types import ErrorType
 from graphene_django_extras import DjangoSerializerType, LimitOffsetGraphqlPagination
 from graphene_django_extras.registry import get_global_registry
 from gatekeeper.realms.models import Realm

@@ -18,7 +18,7 @@
 
 import graphene
 from graphene_django import DjangoObjectType
-from graphene_django.rest_framework.types import ErrorType
+from graphene_django.types import ErrorType
 from gatekeeper.configuration.models import Configuration
 from gatekeeper.configuration.serializers import ConfigurationSerializer
 
